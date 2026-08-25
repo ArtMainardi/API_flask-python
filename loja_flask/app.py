@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 # Cria a aplicação:
 app = Flask(__name__)
@@ -6,19 +6,19 @@ app = Flask(__name__)
 # Define uma rota:
 @app.route("/")
 def index():
-    return "Olá mundo! O Flask está funcionando!!"
+    return render_template("index.html")
 
 @app.route("/sobre")
 def sobre():
-    return '''Esta é a página "sobre"'''
+    return render_template("sobre.html")
 
 @app.route("/produto/<int:id>")
 def produto(id):
-    return f"Exibindo o produto com o ID {id}"
+    render_template("produto.html")
 
 @app.route("/categoria/<nome>")
 def categoria(nome):
-    return f"Produtos da categoria: {categoria}"
+    render_template("categoria.html")
 
 # Incia o servidor:
 if __name__ == "__main__":
