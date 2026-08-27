@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Loja Flask</title>
+    <title>Minha Loja</title>
 </head>
 <body>
-    <h1>Bem vindo à Loja Flask!</h1>
+    <h1>Bem-vindo à Minha Loja!</h1>
     <p>Sistema de gerenciamento de produtos.</p>
     <nav>
-        <a href="/">Início</a>
-        <a href="/produto">Produtos</a>
+        <a href="/">Início</a> |
+        <a href="{{ url_for('produto') }}">Produtos</a> |
         <a href="/sobre">Sobre</a>
     </nav>
 </body>
